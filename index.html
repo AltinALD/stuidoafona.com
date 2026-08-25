@@ -187,6 +187,50 @@
             Rezervoni terminim tuaj — jemi këtu për t'ju ndihmuar.
           </p>
 
+          <form class="reserve-form" id="reserve-form" novalidate>
+            <div class="form-row">
+              <label>
+                <span data-i18n="form.name">Emri</span>
+                <input type="text" name="name" required autocomplete="name" data-i18n-placeholder="form.namePh" placeholder="Emri juaj" />
+              </label>
+              <label>
+                <span data-i18n="form.phone">Telefoni</span>
+                <input type="tel" name="phone" required autocomplete="tel" data-i18n-placeholder="form.phonePh" placeholder="+389 ..." />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                <span data-i18n="form.service">Shërbimi</span>
+                <select name="service" required>
+                  <option value="" data-i18n="form.servicePh">Zgjidhni shërbimin</option>
+                  <option value="Laser" data-i18n="services.laser">Heqja e qimeve me laser</option>
+                  <option value="BioRePeel">BioRePeel</option>
+                  <option value="Weight Loss" data-i18n="services.weight">Humbja e peshës</option>
+                  <option value="EMSculpt">EMSculpt</option>
+                  <option value="Ice Titanium">Ice Titanium</option>
+                  <option value="Facials" data-i18n="services.facials">Trajtime fytyre</option>
+                  <option value="Japanese Spa" data-i18n="services.spa">Spa japoneze</option>
+                </select>
+              </label>
+              <label>
+                <span data-i18n="form.date">Data e preferuar</span>
+                <input type="date" name="date" required />
+              </label>
+            </div>
+            <label>
+              <span data-i18n="form.message">Mesazhi</span>
+              <textarea name="message" rows="3" data-i18n-placeholder="form.messagePh" placeholder="Shënim opsional..."></textarea>
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn-rezervo btn-rezervo--lg" data-i18n="cta.bookCall">Rezervo tani</button>
+              <a href="tel:+38970343878" class="btn-call">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.4 21 3 13.6 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.02l-2.2 2.19z"/></svg>
+                <span data-i18n="cta.call">Telefono</span>
+              </a>
+            </div>
+            <p class="form-note" id="form-note" hidden data-i18n="form.sent">Rezervimi u dërgua në WhatsApp.</p>
+          </form>
+
           <dl class="contact-list">
             <div>
               <dt data-i18n="contact.addressLabel">Adresa</dt>
@@ -201,10 +245,6 @@
               <dd data-i18n="contact.hours">Hën–Prem 10:00–18:00 · Shtunë 10:00–16:00</dd>
             </div>
           </dl>
-
-          <div class="contact-cta">
-            <a href="tel:+38970343878" class="btn-rezervo btn-rezervo--lg" data-i18n="cta.bookCall">Rezervo tani</a>
-          </div>
         </div>
 
         <div class="map-wrap reveal">
@@ -222,6 +262,18 @@
       </div>
     </section>
   </main>
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/38970343878"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="currentColor" d="M16.1 3C9.4 3 4 8.3 4 14.9c0 2.1.6 4.1 1.6 5.9L4 29l8.4-1.6c1.7.9 3.6 1.4 5.6 1.4 6.7 0 12.1-5.4 12.1-12S22.8 3 16.1 3zm0 22c-1.8 0-3.5-.5-5-1.3l-.4-.2-5 1 1-4.8-.2-.4A9.7 9.7 0 016.2 15c0-5.4 4.5-9.8 9.9-9.8s9.9 4.4 9.9 9.8-4.4 9.9-9.9 9.9zm5.4-7.3c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.2l-1 1.2c-.2.2-.4.3-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.7 5.1 2.1.9 2.9 1 3.9.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4 0-.1-.3-.2-.6-.3z"/>
+    </svg>
+  </a>
 
   <footer class="site-footer">
     <div class="footer-inner">

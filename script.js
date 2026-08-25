@@ -1,3 +1,5 @@
+const CLINIC_WHATSAPP = "38970343878";
+
 const translations = {
   sq: {
     "nav.services": "Shërbimet",
@@ -6,6 +8,7 @@ const translations = {
     "nav.contact": "Kontakt",
     "cta.book": "Rezervo",
     "cta.bookCall": "Rezervo tani",
+    "cta.call": "Telefono",
     "hero.title": "Shërbime profesionale të heqjes së qimeve me laser",
     "hero.sub": "Teknologji moderne. Ambient luksoz. Rezultate të dukshme.",
     "services.eyebrow": "Çfarë ofrojmë",
@@ -41,6 +44,17 @@ const translations = {
     "contact.phoneLabel": "Telefon",
     "contact.hoursLabel": "Orari",
     "contact.hours": "Hën–Prem 10:00–18:00 · Shtunë 10:00–16:00",
+    "form.name": "Emri",
+    "form.phone": "Telefoni",
+    "form.service": "Shërbimi",
+    "form.date": "Data e preferuar",
+    "form.message": "Mesazhi",
+    "form.namePh": "Emri juaj",
+    "form.phonePh": "+389 ...",
+    "form.servicePh": "Zgjidhni shërbimin",
+    "form.messagePh": "Shënim opsional...",
+    "form.sent": "Rezervimi u hap në WhatsApp.",
+    "form.waTitle": "Rezervim — Viola Laser Clinic",
   },
   mk: {
     "nav.services": "Услуги",
@@ -49,6 +63,7 @@ const translations = {
     "nav.contact": "Контакт",
     "cta.book": "Резервирај",
     "cta.bookCall": "Резервирај сега",
+    "cta.call": "Јави се",
     "hero.title": "Професионални услуги за ласерска епилација",
     "hero.sub": "Модерна технологија. Луксузен амбиент. Видливи резултати.",
     "services.eyebrow": "Што нудиме",
@@ -84,26 +99,45 @@ const translations = {
     "contact.phoneLabel": "Телефон",
     "contact.hoursLabel": "Работно време",
     "contact.hours": "Пон–Пет 10:00–18:00 · Саб 10:00–16:00",
+    "form.name": "Име",
+    "form.phone": "Телефон",
+    "form.service": "Услуга",
+    "form.date": "Префериран датум",
+    "form.message": "Порака",
+    "form.namePh": "Вашето име",
+    "form.phonePh": "+389 ...",
+    "form.servicePh": "Изберете услуга",
+    "form.messagePh": "Опционална белешка...",
+    "form.sent": "Резервацијата е отворена во WhatsApp.",
+    "form.waTitle": "Резервација — Viola Laser Clinic",
   },
 };
 
+let currentLang = "sq";
+
 function setLanguage(lang) {
-  const dict = translations[lang] || translations.sq;
-  document.documentElement.lang = lang === "mk" ? "mk" : "sq";
+  currentLang = lang === "mk" ? "mk" : "sq";
+  const dict = translations[currentLang];
+  document.documentElement.lang = currentLang;
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     if (dict[key]) el.textContent = dict[key];
   });
 
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+    const key = el.getAttribute("data-i18n-placeholder");
+    if (dict[key]) el.setAttribute("placeholder", dict[key]);
+  });
+
   document.querySelectorAll(".lang-btn").forEach((btn) => {
-    const active = btn.dataset.lang === lang;
+    const active = btn.dataset.lang === currentLang;
     btn.classList.toggle("is-active", active);
     btn.setAttribute("aria-pressed", active ? "true" : "false");
   });
 
   try {
-    localStorage.setItem("viola-lang", lang);
+    localStorage.setItem("viola-lang", currentLang);
   } catch (_) {}
 }
 
@@ -156,6 +190,42 @@ document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el))
 
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+const reserveForm = document.getElementById("reserve-form");
+const formNote = document.getElementById("form-note");
+
+reserveForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (!reserveForm.checkValidity()) {
+    reserveForm.reportValidity();
+    return;
+  }
+
+  const data = new FormData(reserveForm);
+  const name = String(data.get("name") || "").trim();
+  const phone = String(data.get("phone") || "").trim();
+  const service = String(data.get("service") || "").trim();
+  const date = String(data.get("date") || "").trim();
+  const message = String(data.get("message") || "").trim();
+  const dict = translations[currentLang];
+
+  const lines = [
+    dict["form.waTitle"],
+    "",
+    `${dict["form.name"]}: ${name}`,
+    `${dict["form.phone"]}: ${phone}`,
+    `${dict["form.service"]}: ${service}`,
+    `${dict["form.date"]}: ${date}`,
+  ];
+  if (message) lines.push(`${dict["form.message"]}: ${message}`);
+
+  const url = `https://wa.me/${CLINIC_WHATSAPP}?text=${encodeURIComponent(lines.join("\n"))}`;
+  window.open(url, "_blank", "noopener,noreferrer");
+
+  if (formNote) {
+    formNote.hidden = false;
+  }
+});
 
 let saved = "sq";
 try {
