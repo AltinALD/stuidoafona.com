@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+
+images/Screenshot*
+images/instagram-ref.png
