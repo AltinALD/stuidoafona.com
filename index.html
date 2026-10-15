@@ -3,344 +3,336 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PMU by Gerta — Luxury Permanent Makeup</title>
-  <meta name="description" content="Gerta Statovci — Luxury PMU Specialist & Brow Artist. Precision brows and lip blush in Prishtine, Dallas & Miami." />
+  <title>Studio Agona — Makeup, Hair &amp; Brows in Prishtina</title>
+  <meta name="description" content="Studio Agona is a beauty studio in Prishtina. Makeup, hair, brows, lashes, lip blush, and microblading training. Book a termin on WhatsApp." />
+  <meta name="theme-color" content="#161311" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/png" href="images/logo.png" />
 </head>
 <body class="is-loading">
-  <div class="preloader" id="preloader" aria-hidden="false">
+  <div class="preloader" id="preloader">
     <div class="preloader-inner">
-      <img class="preloader-logo" src="images/logo.png" alt="PMU by Gerta" />
-      <div class="preloader-bar" aria-hidden="true">
-        <span class="preloader-bar-fill"></span>
-      </div>
-      <p class="preloader-text">Luxury lies in the details</p>
+      <img class="preloader-logo" src="images/logo.png" alt="Studio Agona" />
+      <p class="preloader-text">Prishtinë</p>
     </div>
   </div>
 
   <header class="site-header" id="top">
     <div class="header-inner">
-      <a href="#top" class="brand" aria-label="PMU by Gerta">
-        <img class="brand-logo" src="images/logo.png" alt="PMU by Gerta" />
+      <a href="#top" class="brand" aria-label="Studio Agona">
+        <img class="brand-logo" src="images/logo.png" alt="" />
+        <span class="brand-name">Studio Agona</span>
       </a>
 
       <nav class="nav" aria-label="Main">
-        <a href="#meet">Meet Me</a>
-        <a href="#techniques">Techniques</a>
-        <a href="#instagram">Instagram</a>
-        <a href="#packages">Packages</a>
-        <a href="#info">Info</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#looks" data-i18n="nav.work">Work</a>
+        <a href="#book" data-i18n="nav.book">Book</a>
+        <a href="#studio" data-i18n="nav.studio">Studio</a>
       </nav>
 
       <div class="header-actions">
-        <a href="#book" class="btn-book">Book Now</a>
-        <button type="button" class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <div class="lang" role="group" data-i18n-aria="lang.label">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="sq" aria-pressed="false">SHQ</button>
+        </div>
+        <a href="#book" class="btn-book header-book"><span data-i18n="nav.bookCta">Book a termin</span></a>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" data-i18n-aria="nav.menu">
           <span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <nav class="mobile-nav" aria-hidden="true">
-    <a href="#meet">Meet Me</a>
-    <a href="#techniques">Techniques</a>
-    <a href="#instagram">Instagram</a>
-    <a href="#packages">Packages</a>
-    <a href="#info">Info</a>
-    <a href="#book" class="btn-book">Book Now</a>
+  <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <a href="#services" data-i18n="nav.services">Services</a>
+    <a href="#looks" data-i18n="nav.work">Work</a>
+    <a href="#book" data-i18n="nav.book">Book</a>
+    <a href="#studio" data-i18n="nav.studio">Studio</a>
+    <div class="lang lang--light" role="group">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="sq" aria-pressed="false">SHQ</button>
+    </div>
+    <a class="btn-wa" id="menu-wa" href="https://wa.me/38344822399" target="_blank" rel="noopener noreferrer">WhatsApp</a>
   </nav>
 
   <main>
     <section class="hero">
       <div class="hero-media">
-        <video
-          class="hero-video"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto"
-          poster="images/brows-combo.png"
-        >
-          <source src="images/hero-video.mp4" type="video/mp4" />
+        <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="images/glam-studio.png">
+          <source src="images/hero.mp4" type="video/mp4" />
         </video>
         <div class="hero-veil"></div>
       </div>
       <div class="hero-content">
-        <p class="hero-brand">PMU by Gerta</p>
-        <h1 class="hero-title">Luxury lies in the details</h1>
-        <p class="hero-sub">Precision brows &amp; lip blush — Prishtine · Dallas · Miami</p>
+        <p class="live-status" aria-live="polite">
+          <span class="live-dot" id="live-dot"></span>
+          <span id="live-status">Open now</span>
+        </p>
+        <p class="hero-kicker" data-i18n="hero.kicker">Makeup · Hair · Brows · Lashes</p>
+        <h1 class="hero-title" data-i18n="hero.title">A little glam, a lot of confidence.</h1>
+        <p class="hero-sub" data-i18n="hero.sub">Makeup, hair, brows, and lashes in Prishtina — and wherever you need us.</p>
         <div class="hero-cta">
-          <a href="#book" class="btn-book btn-book--lg">Book an Appointment</a>
-          <a href="#instagram" class="btn-line">View Instagram</a>
+          <a href="#book" class="btn-book btn-book--lg"><span data-i18n="hero.book">Book a termin</span></a>
+          <a class="btn-wa" id="hero-wa" href="https://wa.me/38344822399" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.1 3C9.4 3 4 8.3 4 14.9c0 2.1.6 4.1 1.6 5.9L4 29l8.4-1.6c1.7.9 3.6 1.4 5.6 1.4 6.7 0 12.1-5.4 12.1-12S22.8 3 16.1 3zm0 22c-1.8 0-3.5-.5-5-1.3l-.4-.2-5 1 1-4.8-.2-.4A9.7 9.7 0 016.2 15c0-5.4 4.5-9.8 9.9-9.8s9.9 4.4 9.9 9.8-4.4 9.9-9.9 9.9zm5.4-7.3c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.2l-1 1.2c-.2.2-.4.3-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.7 5.1 2.1.9 2.9 1 3.9.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4 0-.1-.3-.2-.6-.3z"/></svg>
+            <span>WhatsApp</span>
+          </a>
         </div>
       </div>
-      <a href="#meet" class="hero-scroll" aria-label="Scroll">
-        <span></span>
-      </a>
     </section>
 
-    <section class="meet" id="meet">
-      <div class="meet-grid section-wrap">
-        <div class="meet-visual reveal">
-          <img src="images/profile.png" alt="Gerta Statovci, luxury PMU specialist" />
+    <section class="about" id="about">
+      <div class="section-wrap about-grid">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="about.eyebrow">The studio</p>
+          <h2 class="section-title" data-i18n="about.title">Beauty, booked simply.</h2>
         </div>
-        <div class="meet-copy reveal">
-          <p class="eyebrow">Meet Me</p>
-          <h2 class="section-title">Gerta Statovci</h2>
-          <p class="meet-role">Luxury PMU Specialist · Brow Artist &amp; Educator</p>
-          <p>
-            With over seven years refining the art of permanent makeup, Gerta creates
-            brows and lips that feel like you — elevated, soft, and meticulously balanced.
-          </p>
-          <p>
-            From Prishtine to Dallas and Miami, every session is built on sterile technique,
-            natural pigment mapping, and results that heal beautifully.
-          </p>
-          <ul class="meet-stats">
-            <li><strong>7+</strong><span>Years</span></li>
-            <li><strong>25K+</strong><span>Followers</span></li>
-            <li><strong>3</strong><span>Cities</span></li>
+        <div class="reveal">
+          <p class="about-copy" data-i18n="about.text">Studio Agona is a beauty studio on Bill Klinton in Prishtina. Clients come for makeup, hair, brows, and lashes. Agona also teaches microblading and travels for weddings and events — in Kosovo and abroad.</p>
+          <ul class="stat-list">
+            <li><strong data-i18n="about.s1v">Prishtinë</strong><span data-i18n="about.s1k">Studio</span></li>
+            <li><strong data-i18n="about.s2v">Kosovo &amp; worldwide</strong><span data-i18n="about.s2k">Travels</span></li>
+            <li><strong data-i18n="about.s3v">Microblading</strong><span data-i18n="about.s3k">Trainings</span></li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="techniques" id="techniques">
+    <section class="services" id="services">
       <div class="section-wrap">
-        <p class="eyebrow">Techniques</p>
-        <h2 class="section-title">Signature PMU</h2>
-        <p class="section-lead">
-          Soft definition for brows and lips — designed to look effortless, not overdone.
-        </p>
+        <p class="eyebrow" data-i18n="svc.eyebrow">Services</p>
+        <h2 class="section-title" data-i18n="svc.title">What we do</h2>
+        <p class="section-lead" data-i18n="svc.lead">Makeup, hair, brows, lashes, lips, and skin — plus training and travel. Prices are confirmed on WhatsApp.</p>
 
-        <div class="technique-list">
-          <article class="technique reveal">
-            <div class="technique-media">
-              <img src="images/brows-combo.png" alt="Natural brows vs combo brows results" loading="lazy" />
+        <div class="service-grid">
+          <article class="service reveal">
+            <div class="service-media">
+              <img src="images/glam-studio.png" alt="Glam makeup in the studio" data-i18n-alt="alt.makeup" />
             </div>
-            <div class="technique-body">
-              <h3>Brows</h3>
-              <p>Natural, Combo, and Ombré — hair strokes and soft powder shading tailored to your bone structure and lifestyle.</p>
-              <ul>
-                <li>Natural Brows</li>
-                <li>Combo Brows</li>
-                <li>Ombré Brows</li>
-              </ul>
+            <div class="service-body">
+              <p class="service-index">01</p>
+              <h3 data-i18n="svc.makeup.t">Makeup</h3>
+              <p data-i18n="svc.makeup.d">Full glam, soft glam, and bridal. Skin, eyes, and lips finished for photos, weddings, and events.</p>
+              <p class="service-meta" data-i18n="svc.makeup.m">about 1.5 hr · price on WhatsApp</p>
+              <button type="button" class="text-link" data-book="makeup" data-i18n="svc.book">Book this</button>
             </div>
           </article>
 
-          <article class="technique technique--reverse reveal">
-            <div class="technique-media">
-              <img src="images/lip-blush.png" alt="Natural lips to lip blush transformation" loading="lazy" />
+          <article class="service reveal">
+            <div class="service-media">
+              <img src="images/hair-waves.png" alt="Soft wavy hair" data-i18n-alt="alt.hair" />
             </div>
-            <div class="technique-body">
-              <h3>Lips</h3>
-              <p>Lip blush that restores color, symmetry, and a soft stained finish — from barely-there to glossy definition.</p>
-              <ul>
-                <li>Natural Lip Blush</li>
-                <li>Full Lip Color</li>
-                <li>Glossy Finish</li>
-              </ul>
+            <div class="service-body">
+              <p class="service-index">02</p>
+              <h3 data-i18n="svc.hair.t">Hair</h3>
+              <p data-i18n="svc.hair.d">Blowouts, soft waves, and event styling, finished so the hair sits with the makeup.</p>
+              <p class="service-meta" data-i18n="svc.hair.m">about 75 min · price on WhatsApp</p>
+              <button type="button" class="text-link" data-book="hair" data-i18n="svc.book">Book this</button>
             </div>
+          </article>
+
+          <article class="service reveal">
+            <div class="service-media service-media--compare">
+              <img src="images/brows.png" alt="Natural brows and combo brows" data-i18n-alt="alt.brows" />
+            </div>
+            <div class="service-body">
+              <p class="service-index">03</p>
+              <h3 data-i18n="svc.brows.t">Brows</h3>
+              <p data-i18n="svc.brows.d">Shaping, combo brows, and microblading. A cleaner frame that still looks like your own brows.</p>
+              <p class="service-meta" data-i18n="svc.brows.m">about 1 hr · microblading about 2.5 hr</p>
+              <button type="button" class="text-link" data-book="brows" data-i18n="svc.book">Book this</button>
+            </div>
+          </article>
+
+          <article class="service reveal">
+            <div class="service-media">
+              <img src="images/glam-portrait.png" alt="Glam makeup with defined lashes" data-i18n-alt="alt.lashes" />
+            </div>
+            <div class="service-body">
+              <p class="service-index">04</p>
+              <h3 data-i18n="svc.lashes.t">Lashes</h3>
+              <p data-i18n="svc.lashes.d">Sets that open the eye — fuller for a night out, or lighter for every day.</p>
+              <p class="service-meta" data-i18n="svc.lashes.m">about 2 hr · price on WhatsApp</p>
+              <button type="button" class="text-link" data-book="lashes" data-i18n="svc.book">Book this</button>
+            </div>
+          </article>
+
+          <article class="service reveal">
+            <div class="service-media service-media--compare">
+              <img src="images/lips.png" alt="Natural lips and lip blush" data-i18n-alt="alt.lips" />
+            </div>
+            <div class="service-body">
+              <p class="service-index">05</p>
+              <h3 data-i18n="svc.lips.t">Lip blush</h3>
+              <p data-i18n="svc.lips.d">A soft stained color and a more even lip shape that stays after lipstick comes off.</p>
+              <p class="service-meta" data-i18n="svc.lips.m">about 2 hr · price on WhatsApp</p>
+              <button type="button" class="text-link" data-book="lips" data-i18n="svc.book">Book this</button>
+            </div>
+          </article>
+
+          <article class="service reveal">
+            <div class="service-media">
+              <img src="images/facial.png" alt="Facial treatment" data-i18n-alt="alt.facial" />
+            </div>
+            <div class="service-body">
+              <p class="service-index">06</p>
+              <h3 data-i18n="svc.facial.t">Facial</h3>
+              <p data-i18n="svc.facial.d">A studio facial so skin looks calm and fresh before makeup or an event. We will tell you which treatment fits.</p>
+              <p class="service-meta" data-i18n="svc.facial.m">about 1 hr · price on WhatsApp</p>
+              <button type="button" class="text-link" data-book="facial" data-i18n="svc.book">Book this</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="extra-grid">
+          <article class="extra reveal">
+            <p class="service-index">07</p>
+            <h3 data-i18n="svc.training.t">Microblading training</h3>
+            <p data-i18n="svc.training.d">For artists who want mapping, technique, and a clean studio standard. Ask on WhatsApp for the next date.</p>
+            <p class="service-meta" data-i18n="svc.training.m">about 3 hr · dates on WhatsApp</p>
+            <button type="button" class="text-link" data-book="training" data-i18n="svc.book">Book this</button>
+          </article>
+          <article class="extra reveal">
+            <p class="service-index">08</p>
+            <h3 data-i18n="svc.travel.t">Traveling artist</h3>
+            <p data-i18n="svc.travel.d">Prishtina, the rest of Kosovo, and worldwide. Weddings and events outside the studio.</p>
+            <p class="service-meta" data-i18n="svc.travel.m">Book the date on WhatsApp</p>
+            <a class="text-link" id="travel-wa" data-wa-key="wa.travel" href="https://wa.me/38344822399" target="_blank" rel="noopener noreferrer" data-i18n="svc.ask">Ask on WhatsApp</a>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="instagram" id="instagram">
-      <div class="section-wrap ig-intro">
-        <p class="eyebrow">Social</p>
-        <h2 class="section-title">Instagram</h2>
-        <p class="section-lead">Live from @pmubygerta — real posts, synced from Instagram.</p>
-      </div>
-
-      <div class="ig-embed-wrap reveal">
-        <blockquote
-          class="instagram-media"
-          data-instgrm-permalink="https://www.instagram.com/pmubygerta/?utm_source=ig_embed&amp;utm_campaign=loading"
-          data-instgrm-version="14"
-          style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin:1px auto; max-width:660px; min-width:326px; padding:0; width:calc(100% - 2px);"
-        >
-          <a href="https://www.instagram.com/pmubygerta/?utm_source=ig_embed&amp;utm_campaign=loading" target="_blank" rel="noopener noreferrer">
-            View @pmubygerta on Instagram
-          </a>
-        </blockquote>
-      </div>
-
-      <div class="ig-footer-cta">
-        <a
-          class="btn-book btn-book--lg"
-          href="https://www.instagram.com/pmubygerta/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Open @pmubygerta</a>
-      </div>
-    </section>
-
-    <section class="reviews" id="reviews">
+    <section class="looks" id="looks">
       <div class="section-wrap">
-        <p class="eyebrow">Reviews</p>
-        <h2 class="section-title">Client words</h2>
-        <p class="section-lead">What clients say after healing — soft, natural, and exactly them.</p>
-
-        <div class="review-track">
-          <blockquote class="review reveal">
-            <p>“My combo brows healed so soft — people keep asking if they’re natural. Gerta’s detail is unreal.”</p>
-            <cite>— Dallas client</cite>
-          </blockquote>
-          <blockquote class="review reveal">
-            <p>“The lip blush gave me color I never had. No more looking washed out — just a clean, everyday flush.”</p>
-            <cite>— Miami client</cite>
-          </blockquote>
-          <blockquote class="review reveal">
-            <p>“From mapping to aftercare, everything felt luxury and precise. Best PMU experience I’ve had in Prishtine.”</p>
-            <cite>— Prishtine client</cite>
-          </blockquote>
+        <p class="eyebrow" data-i18n="looks.eyebrow">Selected work</p>
+        <h2 class="section-title" data-i18n="looks.title">Recent looks</h2>
+        <p class="section-lead" data-i18n="looks.lead">Makeup, hair, brows, and lips from the studio.</p>
+        <div class="looks-grid">
+          <figure class="look look--event reveal">
+            <img src="images/glam-event.png" alt="Event makeup and hair" data-i18n-alt="alt.event" />
+            <figcaption data-i18n="looks.event">Event glam</figcaption>
+          </figure>
+          <figure class="look look--film reveal">
+            <video autoplay muted loop playsinline preload="metadata" poster="images/glam-portrait.png">
+              <source src="images/work-video.mp4" type="video/mp4" />
+            </video>
+            <figcaption data-i18n="looks.film">Studio film</figcaption>
+          </figure>
+          <figure class="look look--portrait reveal">
+            <img src="images/glam-portrait.png" alt="Glam portrait" data-i18n-alt="alt.portrait" />
+            <figcaption data-i18n="looks.portrait">Glam portrait</figcaption>
+          </figure>
+          <figure class="look look--hair reveal">
+            <img src="images/hair-waves.png" alt="Soft wavy hair" data-i18n-alt="alt.hair" />
+            <figcaption data-i18n="looks.hair">Soft waves</figcaption>
+          </figure>
         </div>
-      </div>
-    </section>
-
-    <section class="packages" id="packages">
-      <div class="section-wrap">
-        <p class="eyebrow">Package</p>
-        <h2 class="section-title">Investment</h2>
-        <p class="section-lead">
-          Curated sessions with touch-up guidance. Flexible payments available with Afterpay.
+        <p class="looks-more">
+          <a href="https://www.instagram.com/studioagona/" target="_blank" rel="noopener noreferrer" data-i18n="looks.ig">See @studioagona</a>
         </p>
-
-        <ul class="package-list">
-          <li class="package reveal">
-            <h3>Brow Signature</h3>
-            <p>Natural, Combo, or Ombré mapping with pigment selection and aftercare protocol.</p>
-            <span class="package-note">Includes perfecting visit guidance</span>
-          </li>
-          <li class="package reveal">
-            <h3>Lip Blush</h3>
-            <p>Color correction and soft definition for a healed, natural stain.</p>
-            <span class="package-note">Custom shade consultation</span>
-          </li>
-          <li class="package package--featured reveal">
-            <h3>Full Face Edit</h3>
-            <p>Brows + lips designed as one composition — balanced tone, shape, and finish.</p>
-            <span class="package-note">Priority booking · Afterpay eligible</span>
-          </li>
-        </ul>
-
-        <p class="afterpay">
-          <span class="afterpay-label">Afterpay</span>
-          Split your treatment into installments — ask at booking for eligibility.
-        </p>
-      </div>
-    </section>
-
-    <section class="info" id="info">
-      <div class="section-wrap info-grid">
-        <div class="info-copy reveal">
-          <p class="eyebrow">Info</p>
-          <h2 class="section-title">Studios &amp; travel</h2>
-          <p class="section-lead">
-            Appointments by request across three cities. Trainings are currently not offered.
-          </p>
-          <ul class="city-list">
-            <li>
-              <strong>Prishtine</strong>
-              <span>Primary studio</span>
-            </li>
-            <li>
-              <strong>Dallas</strong>
-              <span>By appointment</span>
-            </li>
-            <li>
-              <strong>Miami</strong>
-              <span>By appointment</span>
-            </li>
-          </ul>
-        </div>
-        <div class="info-aside reveal">
-          <h3>Before you book</h3>
-          <ul class="policy-list">
-            <li>Patch test &amp; consultation available on request</li>
-            <li>Arrive with clean, makeup-free brows or lips</li>
-            <li>Follow aftercare for best healed results</li>
-            <li>Deposit may be required to reserve your seat</li>
-          </ul>
-          <a
-            class="ig-link"
-            href="https://www.instagram.com/pmubygerta/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @pmubygerta
-          </a>
-        </div>
       </div>
     </section>
 
     <section class="book" id="book">
       <div class="section-wrap book-grid">
         <div class="book-copy reveal">
-          <p class="eyebrow">Reserve</p>
-          <h2 class="section-title">Book your session</h2>
-          <p class="section-lead">
-            Tell us your city, service, and preferred dates — we’ll confirm availability.
-          </p>
-          <a
-            href="https://www.instagram.com/pmubygerta/"
-            class="btn-book btn-book--lg"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Message on Instagram
+          <p class="eyebrow" data-i18n="book.eyebrow">Calendar</p>
+          <h2 class="section-title" data-i18n="book.title">Book a termin</h2>
+          <p class="section-lead" data-i18n="book.lead">Pick a service, a day, and a time. Your request opens in WhatsApp and we confirm it there.</p>
+          <p class="hours-note" data-i18n="book.hours">Monday–Saturday, 10:00–19:00. Sunday closed.</p>
+          <a class="btn-wa btn-wa--lg" id="book-wa" href="https://wa.me/38344822399" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.1 3C9.4 3 4 8.3 4 14.9c0 2.1.6 4.1 1.6 5.9L4 29l8.4-1.6c1.7.9 3.6 1.4 5.6 1.4 6.7 0 12.1-5.4 12.1-12S22.8 3 16.1 3zm0 22c-1.8 0-3.5-.5-5-1.3l-.4-.2-5 1 1-4.8-.2-.4A9.7 9.7 0 016.2 15c0-5.4 4.5-9.8 9.9-9.8s9.9 4.4 9.9 9.8-4.4 9.9-9.9 9.9zm5.4-7.3c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.2l-1 1.2c-.2.2-.4.3-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.7 5.1 2.1.9 2.9 1 3.9.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4 0-.1-.3-.2-.6-.3z"/></svg>
+            <span data-i18n="book.waDirect">Message without a time</span>
           </a>
         </div>
 
-        <form class="book-form reveal" id="book-form" novalidate>
-          <div class="form-row">
-            <label>
-              <span>Name</span>
-              <input type="text" name="name" required autocomplete="name" placeholder="Your name" />
-            </label>
-            <label>
-              <span>Instagram / Phone</span>
-              <input type="text" name="contact" required placeholder="@handle or phone" />
-            </label>
+        <form class="book-card reveal" id="book-form" novalidate>
+          <p class="field-label" data-i18n="book.service">Service</p>
+          <div class="service-picks" id="service-picks" role="listbox"></div>
+
+          <div class="cal-head">
+            <button type="button" class="cal-nav" id="cal-prev" data-i18n-aria="book.prev" aria-label="Previous month">‹</button>
+            <h3 id="cal-title">October 2026</h3>
+            <button type="button" class="cal-nav" id="cal-next" data-i18n-aria="book.next" aria-label="Next month">›</button>
           </div>
+          <div class="cal-week" id="cal-week"></div>
+          <div class="cal-grid" id="cal-grid"></div>
+          <ul class="cal-legend">
+            <li><i class="dot dot--open"></i><span data-i18n="book.legendOpen">Open</span></li>
+            <li><i class="dot dot--taken"></i><span data-i18n="book.legendTaken">Taken</span></li>
+            <li><i class="dot dot--closed"></i><span data-i18n="book.legendClosed">Closed</span></li>
+          </ul>
+
+          <p class="field-label" id="slot-label" data-i18n="book.time">Time</p>
+          <div class="slot-grid" id="slot-grid"></div>
+          <p class="book-summary" id="book-summary" aria-live="polite"></p>
+
           <div class="form-row">
             <label>
-              <span>Service</span>
-              <select name="service" required>
-                <option value="">Select a service</option>
-                <option value="Natural Brows">Natural Brows</option>
-                <option value="Combo Brows">Combo Brows</option>
-                <option value="Ombre Brows">Ombré Brows</option>
-                <option value="Lip Blush">Lip Blush</option>
-                <option value="Full Face Edit">Full Face Edit</option>
-              </select>
+              <span data-i18n="book.name">Name</span>
+              <input type="text" name="name" id="guest-name" required autocomplete="name" data-i18n-placeholder="book.namePh" placeholder="Your name" />
             </label>
             <label>
-              <span>City</span>
-              <select name="city" required>
-                <option value="">Select a city</option>
-                <option value="Prishtine">Prishtine</option>
-                <option value="Dallas">Dallas</option>
-                <option value="Miami">Miami</option>
-              </select>
+              <span data-i18n="book.phone">Phone</span>
+              <input type="tel" name="phone" id="guest-phone" required autocomplete="tel" inputmode="tel" placeholder="044 …" />
             </label>
           </div>
           <label>
-            <span>Notes</span>
-            <textarea name="message" rows="3" placeholder="Preferred dates, shade notes, questions..."></textarea>
+            <span data-i18n="book.note">Note</span>
+            <textarea name="note" id="guest-note" rows="3" data-i18n-placeholder="book.notePh" placeholder="Preferred shade, event, questions…"></textarea>
           </label>
-          <div class="form-actions">
-            <button type="submit" class="btn-book btn-book--lg">Send request</button>
-          </div>
-          <p class="form-note" id="form-note" hidden>Opening Instagram with your request…</p>
+          <button type="submit" class="btn-wa btn-wa--block">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.1 3C9.4 3 4 8.3 4 14.9c0 2.1.6 4.1 1.6 5.9L4 29l8.4-1.6c1.7.9 3.6 1.4 5.6 1.4 6.7 0 12.1-5.4 12.1-12S22.8 3 16.1 3zm0 22c-1.8 0-3.5-.5-5-1.3l-.4-.2-5 1 1-4.8-.2-.4A9.7 9.7 0 016.2 15c0-5.4 4.5-9.8 9.9-9.8s9.9 4.4 9.9 9.8-4.4 9.9-9.9 9.9zm5.4-7.3c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.2l-1 1.2c-.2.2-.4.3-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.7 5.1 2.1.9 2.9 1 3.9.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4 0-.1-.3-.2-.6-.3z"/></svg>
+            <span data-i18n="book.send">Send on WhatsApp</span>
+          </button>
+          <p class="form-note" id="form-note" role="status"></p>
         </form>
+      </div>
+    </section>
+
+    <section class="studio" id="studio">
+      <div class="section-wrap studio-grid">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="studio.eyebrow">Visit</p>
+          <h2 class="section-title" data-i18n="studio.title">The studio</h2>
+          <p class="section-lead" data-i18n="studio.lead">Bill Klinton 302, Prishtina. Message us, or pick a termin above.</p>
+          <dl class="studio-facts">
+            <div>
+              <dt data-i18n="studio.address">Address</dt>
+              <dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Bill+Klinton+302+Prishtin%C3%AB" target="_blank" rel="noopener noreferrer">Bill Klinton 302, Prishtinë 10000</a></dd>
+            </div>
+            <div>
+              <dt data-i18n="studio.phone">Phone</dt>
+              <dd><a href="tel:+38344822399">+383 44 822 399</a></dd>
+            </div>
+            <div>
+              <dt data-i18n="studio.hours">Hours</dt>
+              <dd>
+                <span data-i18n="studio.hoursV">Monday–Saturday 10:00–19:00</span><br />
+                <span data-i18n="studio.sun">Sunday closed</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+        <aside class="studio-aside reveal">
+          <h3 data-i18n="studio.before">Before you come</h3>
+          <ul class="policy-list">
+            <li data-i18n="studio.p1">Come with clean skin for makeup or a facial.</li>
+            <li data-i18n="studio.p2">Brow and lip work starts with a short consult.</li>
+            <li data-i18n="studio.p3">Travel dates are confirmed on WhatsApp.</li>
+          </ul>
+          <div class="studio-links">
+            <a href="https://www.instagram.com/studioagona/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/studioagona" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Bill+Klinton+302+Prishtin%C3%AB" target="_blank" rel="noopener noreferrer" data-i18n="studio.map">Open in Maps</a>
+          </div>
+        </aside>
       </div>
     </section>
   </main>
@@ -348,34 +340,27 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <img class="footer-logo" src="images/logo.png" alt="PMU by Gerta" />
-        <p>Luxury PMU · Prishtine · Dallas · Miami</p>
+        <img class="footer-logo" src="images/logo.png" alt="" />
+        <div>
+          <strong>Studio Agona</strong>
+          <p data-i18n="footer.line">Makeup · Hair · Brows · Lashes</p>
+        </div>
       </div>
-      <a
-        href="https://www.instagram.com/pmubygerta/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="footer-ig"
-      >
-        Instagram
-      </a>
-      <p class="footer-copy">&copy; <span id="year"></span> PMU by Gerta</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/studioagona/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://wa.me/38344822399" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="tel:+38344822399">+383 44 822 399</a>
+      </div>
+      <p class="footer-copy">© <span id="year"></span> Studio Agona · Prishtinë</p>
     </div>
   </footer>
 
-  <a
-    class="whatsapp-float"
-    href="https://wa.me/38345516260"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="WhatsApp"
-  >
-    <svg viewBox="0 0 32 32" aria-hidden="true">
-      <path fill="currentColor" d="M16.1 3C9.4 3 4 8.3 4 14.9c0 2.1.6 4.1 1.6 5.9L4 29l8.4-1.6c1.7.9 3.6 1.4 5.6 1.4 6.7 0 12.1-5.4 12.1-12S22.8 3 16.1 3zm0 22c-1.8 0-3.5-.5-5-1.3l-.4-.2-5 1 1-4.8-.2-.4A9.7 9.7 0 016.2 15c0-5.4 4.5-9.8 9.9-9.8s9.9 4.4 9.9 9.8-4.4 9.9-9.9 9.9zm5.4-7.3c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.2l-1 1.2c-.2.2-.4.3-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.7 5.1 2.1.9 2.9 1 3.9.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4 0-.1-.3-.2-.6-.3z"/>
-    </svg>
+  <a class="whatsapp-float" id="whatsapp-float" href="https://wa.me/38344822399" target="_blank" rel="noopener noreferrer" data-i18n-aria="wa.float" aria-label="WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.1 3C9.4 3 4 8.3 4 14.9c0 2.1.6 4.1 1.6 5.9L4 29l8.4-1.6c1.7.9 3.6 1.4 5.6 1.4 6.7 0 12.1-5.4 12.1-12S22.8 3 16.1 3zm0 22c-1.8 0-3.5-.5-5-1.3l-.4-.2-5 1 1-4.8-.2-.4A9.7 9.7 0 016.2 15c0-5.4 4.5-9.8 9.9-9.8s9.9 4.4 9.9 9.8-4.4 9.9-9.9 9.9zm5.4-7.3c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.2l-1 1.2c-.2.2-.4.3-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.7 5.1 2.1.9 2.9 1 3.9.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4 0-.1-.3-.2-.6-.3z"/></svg>
+    <span>WhatsApp</span>
   </a>
 
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}.preloader{display:none!important}</style></noscript>
   <script src="script.js"></script>
-  <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
